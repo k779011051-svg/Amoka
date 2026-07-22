@@ -1,0 +1,45 @@
+# Model outputs and checkpoints
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+pytorch_model*.bin
+
+# Generated datasets and caches
+data/processed/
+data/cache/
+cache/
+fsd50k_train_cot.jsonl
+fsd50k_val_cot.jsonl
+fsd50k_train_direct.jsonl
+fsd50k_val_direct.jsonl
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local experiment configurations
+config/*.local.yaml
+
+# Logs
+logs/
+wandb/
+swanlog/
+*.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
