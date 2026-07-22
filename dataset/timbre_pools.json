@@ -1,0 +1,16 @@
+{
+    "harsh_mechanical": ["abrasive", "gritty", "coarse", "metallic", "industrial", "scratchy", "grating"],
+    "smooth_natural": ["fluidic", "continuous", "steady", "soft", "ambient", "atmospheric", "velvety"],
+    "deep_low": ["guttural", "rumbling", "heavy", "booming", "muffled", "resonant", "thunderous"],
+    "sharp_high": ["piercing", "shrill", "whistling", "acute", "thin", "high-pitched", "crisp"],
+    "impulsive": ["explosive", "percussive", "snappy", "abrupt", "sharp", "punchy", "staccato"],
+    "organic_animal": ["vibrant", "resonant", "textured", "biological", "hoarse", "organic", "breathy"],
+    "bright_crisp": ["bright", "clear", "sparkling", "airy", "open", "transparent", "present"],
+    "dry_staccato": ["dry", "tight", "damped", "short", "quick-decay", "non-reverberant", "snappy"],
+    "wet_sustained": ["sustained", "long-decay", "reverberant", "lush", "ringing", "legato", "flowing"],
+    "resonant_hollow": ["hollow", "cavity-resonant", "woody", "boomy", "boxy", "open", "chamber-like"],
+    "pure_sinusoidal": ["pure", "clean", "sine-like", "minimal-harmonic", "tonal", "clear", "uncluttered"],
+    "noisy_distorted": ["distorted", "fuzzy", "grungy", "noisy", "clipped", "overdriven", "compressed"],
+    "muddy_thick": ["thick", "dense", "muddy", "warm", "full-bodied", "low-heavy", "rounded"],
+    "granular_textured": ["granular", "textured", "grainy", "buzzy", "raspy", "detailed", "complex"]
+}
