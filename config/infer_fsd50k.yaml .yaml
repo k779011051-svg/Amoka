@@ -1,0 +1,39 @@
+# ============================================================
+# FSD50K inference configuration
+# ============================================================
+
+# These settings must match the training configuration.
+adapter_type: amoka
+supervision_type: cot
+amoka_variant: full
+
+# Base model and checkpoint
+model_path: /path/to/Qwen2-Audio-7B-Instruct
+checkpoint_path: /path/to/checkpoint
+
+# Used to locate the latest checkpoint when checkpoint_path is null.
+output_root: outputs
+
+# A JSONL file or Hugging Face dataset cache
+test_data_path: /path/to/fsd50k_processed_val_cache_cot
+
+# Official FSD50K vocabulary
+vocabulary_path: /path/to/FSD50K/FSD50K.metadata/vocabulary.csv
+vocab_label_column: 1
+
+# Output
+output_path: outputs/inference_results.jsonl
+overwrite: false
+
+# Generation
+batch_size: 3
+max_samples: null
+max_length: 2048
+max_new_tokens: 800
+
+# Enable for A-CoT checkpoints and disable for direct checkpoints.
+use_response_prefix: true
+response_prefix: "Reasoning Steps:\n"
+
+# Model backend
+attention_implementation: sdpa

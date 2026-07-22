@@ -1,0 +1,27 @@
+# ============================================================
+# FSD50K A-CoT dataset construction configuration
+# ============================================================
+
+# Root directory of the extracted FSD50K dataset
+fsd50k_root: /path/to/FSD50K
+
+# Acoustic supervision resources
+feature_templates: dataset/fsd50k_features.json
+timbre_pools: dataset/timbre_pools.json
+alias_mapping: dataset/fsd50k_feature_aliases.json
+
+# Generated JSONL files will be written to this directory
+output_dir: data/processed
+
+# Column index of category names in vocabulary.csv
+vocab_label_column: 1
+
+# Expected supervision composition:
+# 160 template-covered categories and 40 label-only categories
+expected_coverage: 160
+
+# Maximum number of detailed acoustic reasoning blocks per sample
+max_detailed_labels: 4
+
+# Random seed used for deterministic target construction
+seed: 42
