@@ -1,0 +1,49 @@
+# ============================================================
+# FSD50K training configuration
+# ============================================================
+
+# Adapter configuration
+# adapter_type: amoka | lora
+adapter_type: amoka
+
+# supervision_type: cot | direct
+supervision_type: cot
+
+# A-MokA variant:
+# full | wo_audio | wo_mlp | wo_attn | all_r32 | all_r16
+# This option is ignored when adapter_type is set to lora.
+amoka_variant: full
+
+# Model and vocabulary
+model_path: /path/to/Qwen2-Audio-7B-Instruct
+vocabulary_path: /path/to/FSD50K/FSD50K.metadata/vocabulary.csv
+vocab_label_column: 1
+
+# Preprocessed Hugging Face dataset caches
+training_cache: /path/to/fsd50k_processed_train_cache_cot
+validation_cache: /path/to/fsd50k_processed_val_cache_cot
+
+# Output directory
+output_root: outputs
+
+# Sequence and generation settings
+max_length: 2048
+max_new_tokens: 600
+
+# Optimization
+learning_rate: 0.0001
+warmup_ratio: 0.03
+num_train_epochs: 5
+
+train_batch_size: 2
+eval_batch_size: 2
+gradient_accumulation_steps: 8
+num_workers: 4
+
+# Runtime
+device: 0
+fast_dev_run: false
+
+# Experiment tracking
+enable_swanlab: false
+swanlab_project: Qwen2-Audio-FSD50K
